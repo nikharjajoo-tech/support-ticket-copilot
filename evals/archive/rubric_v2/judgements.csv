@@ -1,0 +1,21 @@
+key,ticket_id,model,grounded,answers_question,unsupported_claims,note,grader
+T047|Gemini 3.5 Flash-Lite,T047,Gemini 3.5 Flash-Lite,True,3,,Fully explains how and where to report sign-up errors.,gemini-3.6-flash
+T050|Gemini 3.5 Flash-Lite,T050,Gemini 3.5 Flash-Lite,True,3,,Fully addresses where and how to submit a formal complaint.,gemini-3.6-flash
+T023|Gemini 3.5 Flash-Lite,T023,Gemini 3.5 Flash-Lite,True,3,,Fully details the refund policy and how to request a refund.,gemini-3.6-flash
+T009|Ministral 14B,T009,Ministral 14B,False,3,ask your workspace admin to share it with you,"Provides the correct location to view invoices, though incorrectly advises asking the admin to share it rather than adding the user as a billing contact.",gemini-3.6-flash
+T042|Gemini 3.5 Flash-Lite,T042,Gemini 3.5 Flash-Lite,True,3,,Fully addresses troubleshooting and reporting online payment issues.,gemini-3.6-flash
+T049|Ministral 14B,T049,Ministral 14B,True,3,,Fully explains how to update account profile and billing details.,gemini-3.6-flash
+T013|Ministral 14B,T013,Ministral 14B,True,3,,Fully explains the cancellation penalty calculation and where to view it.,gemini-3.6-flash
+T030|Gemini 3.5 Flash-Lite,T030,Gemini 3.5 Flash-Lite,True,3,,Fully explains how to add a user to a plan or set up a new workspace.,gemini-3.6-flash
+T031|Gemini 3.5 Flash-Lite,T031,Gemini 3.5 Flash-Lite,True,3,,Fully explains where to check the exact early exit fee.,gemini-3.6-flash
+T002|Ministral 14B,T002,Ministral 14B,True,3,,Fully lists all accepted and unaccepted payment methods.,gemini-3.6-flash
+T004|Ministral 14B,T004,Ministral 14B,True,3,,Fully answers how to connect with a live assistant using accurate channels and hours.,gemini-3.6-flash
+T020|Ministral 14B,T020,Ministral 14B,False,3,Each workspace must have its own admin email,"Explains how to sign up for a new workspace or invite a user, but includes an unsupported claim about workspace admin emails.",gemini-3.6-flash
+T021|Gemini 3.5 Flash-Lite,T021,Gemini 3.5 Flash-Lite,True,3,,Accurately details the cancellation fee policies and menu paths for monthly and annual plans.,gemini-3.6-flash
+T032|Ministral 14B,T032,Ministral 14B,False,3,For urgent matters outside these hours,"Answers how to reach an agent, but falsely claims email is specifically for urgent matters outside live hours.",gemini-3.6-flash
+T040|Gemini 3.5 Flash-Lite,T040,Gemini 3.5 Flash-Lite,True,3,,Provides clear instructions on where to find invoices and who has permission to view them.,gemini-3.6-flash
+T008|Ministral 14B,T008,Ministral 14B,True,3,,Accurately outlines the eligibility windows and process for requesting refunds.,gemini-3.6-flash
+T010|Ministral 14B,T010,Ministral 14B,True,3,,Correctly states how the early exit fee is calculated and where to see the exact amount.,gemini-3.6-flash
+T017|Gemini 3.5 Flash-Lite,T017,Gemini 3.5 Flash-Lite,True,3,,Provides the exact URL and navigation path to subscribe to the newsletter.,gemini-3.6-flash
+T042|Ministral 14B,T042,Ministral 14B,True,3,,Gives relevant troubleshooting steps and settings paths for payment issues based on the help centre.,gemini-3.6-flash
+T046|Ministral 14B,T046,Ministral 14B,True,3,,Completely and accurately lists all accepted and unaccepted payment methods.,gemini-3.6-flash

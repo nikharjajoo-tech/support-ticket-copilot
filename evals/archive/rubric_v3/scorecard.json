@@ -1,0 +1,193 @@
+{
+ "scores": {
+  "Gemini 3.5 Flash-Lite": {
+   "tickets_answered": "50/50",
+   "valid_output": 1.0,
+   "category_accuracy": 0.98,
+   "priority_accuracy": 0.94,
+   "high_recall": 0.9444444444444444,
+   "high_precision": 1.0,
+   "under_prioritised": 0.06,
+   "over_prioritised": 0.0,
+   "groundedness": NaN,
+   "fully_answers": NaN,
+   "replies_graded": 0,
+   "routed_to_human": 0.34,
+   "median_latency_s": 1.73,
+   "p90_latency_s": 1.934,
+   "avg_input_tokens": 2819.42,
+   "avg_output_tokens": 121.62,
+   "cost_per_1k_tickets_usd": 1.149876
+  },
+  "Ministral 14B": {
+   "tickets_answered": "50/50",
+   "valid_output": 1.0,
+   "category_accuracy": 1.0,
+   "priority_accuracy": 0.94,
+   "high_recall": 0.9444444444444444,
+   "high_precision": 0.9444444444444444,
+   "under_prioritised": 0.04,
+   "over_prioritised": 0.02,
+   "groundedness": NaN,
+   "fully_answers": NaN,
+   "replies_graded": 0,
+   "routed_to_human": 0.38,
+   "median_latency_s": 2.09,
+   "p90_latency_s": 2.604,
+   "avg_input_tokens": 2785.58,
+   "avg_output_tokens": 146.36,
+   "cost_per_1k_tickets_usd": 0.586388
+  }
+ },
+ "details": {
+  "Gemini 3.5 Flash-Lite": {
+   "per_category_accuracy": {
+    "ACCOUNT": 0.86,
+    "CANCEL": 1.0,
+    "CONTACT": 1.0,
+    "FEEDBACK": 1.0,
+    "INVOICE": 1.0,
+    "NEWSLETTER": 1.0,
+    "PAYMENT": 1.0,
+    "REFUND": 1.0
+   },
+   "priority_confusion": {
+    "H": {
+     "H": 17,
+     "M": 0,
+     "L": 0
+    },
+    "M": {
+     "H": 1,
+     "M": 16,
+     "L": 0
+    },
+    "L": {
+     "H": 0,
+     "M": 2,
+     "L": 14
+    }
+   },
+   "misses": [
+    {
+     "ticket_id": "T004",
+     "message": "can you help me to talk with an assistant?",
+     "true_category": "CONTACT",
+     "category": "CONTACT",
+     "true_priority": "M",
+     "priority": "L",
+     "priority_reason": "Questions about support hours or contact channels are classified as Low priority."
+    },
+    {
+     "ticket_id": "T027",
+     "message": "problems with platinum account deletions",
+     "true_category": "ACCOUNT",
+     "category": "CANCEL",
+     "true_priority": "H",
+     "priority": "H",
+     "priority_reason": "Any question about cancellation, exit or early-termination fees is High priority."
+    },
+    {
+     "ticket_id": "T032",
+     "message": "I have got to talk with a live agent",
+     "true_category": "CONTACT",
+     "category": "CONTACT",
+     "true_priority": "M",
+     "priority": "L",
+     "priority_reason": "Questions about support hours or contact channels are classified as Low priority."
+    },
+    {
+     "ticket_id": "T037",
+     "message": "you are not helpful, can I speak with a person?",
+     "true_category": "CONTACT",
+     "category": "CONTACT",
+     "true_priority": "H",
+     "priority": "M",
+     "priority_reason": "Customer is asking for a human agent, which is a Medium priority task."
+    }
+   ],
+   "ungrounded": []
+  },
+  "Ministral 14B": {
+   "per_category_accuracy": {
+    "ACCOUNT": 1.0,
+    "CANCEL": 1.0,
+    "CONTACT": 1.0,
+    "FEEDBACK": 1.0,
+    "INVOICE": 1.0,
+    "NEWSLETTER": 1.0,
+    "PAYMENT": 1.0,
+    "REFUND": 1.0
+   },
+   "priority_confusion": {
+    "H": {
+     "H": 17,
+     "M": 1,
+     "L": 0
+    },
+    "M": {
+     "H": 1,
+     "M": 16,
+     "L": 0
+    },
+    "L": {
+     "H": 0,
+     "M": 1,
+     "L": 14
+    }
+   },
+   "misses": [
+    {
+     "ticket_id": "T035",
+     "message": "i have got to look for bill #85632",
+     "true_category": "INVOICE",
+     "category": "INVOICE",
+     "true_priority": "M",
+     "priority": "L",
+     "priority_reason": "Customer is requesting a specific invoice, which is a routine information request with no urgency or risk."
+    },
+    {
+     "ticket_id": "T037",
+     "message": "you are not helpful, can I speak with a person?",
+     "true_category": "CONTACT",
+     "category": "CONTACT",
+     "true_priority": "H",
+     "priority": "M",
+     "priority_reason": "Customer explicitly asked to speak with a human agent now, which qualifies as a medium-priority request under the rubric (v3)."
+    },
+    {
+     "ticket_id": "T048",
+     "message": "I'm trying to request rebates of my money",
+     "true_category": "REFUND",
+     "category": "REFUND",
+     "true_priority": "M",
+     "priority": "H",
+     "priority_reason": "Asking about refund status or a problem with a refund qualifies as High priority if there is a perceived issue ('rebates of my money' implies a refund is expected but not received or disputed)."
+    }
+   ],
+   "ungrounded": []
+  }
+ },
+ "targets": {
+  "high_recall": [
+   0.9,
+   ">="
+  ],
+  "category_accuracy": [
+   0.9,
+   ">="
+  ],
+  "priority_accuracy": [
+   0.75,
+   ">="
+  ],
+  "groundedness": [
+   0.95,
+   ">="
+  ],
+  "median_latency_s": [
+   3.0,
+   "<="
+  ]
+ }
+}

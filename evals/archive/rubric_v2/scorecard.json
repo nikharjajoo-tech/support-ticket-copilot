@@ -1,0 +1,311 @@
+{
+ "scores": {
+  "Gemini 3.5 Flash-Lite": {
+   "tickets_answered": "50/50",
+   "valid_output": 1.0,
+   "category_accuracy": 0.98,
+   "priority_accuracy": 0.84,
+   "high_recall": 0.9444444444444444,
+   "high_precision": 0.8947368421052632,
+   "under_prioritised": 0.06,
+   "over_prioritised": 0.1,
+   "groundedness": 1.0,
+   "fully_answers": 1.0,
+   "replies_graded": 9,
+   "routed_to_human": 0.38,
+   "median_latency_s": 1.78,
+   "p90_latency_s": 11.364,
+   "avg_input_tokens": 2646.42,
+   "avg_output_tokens": 128.74,
+   "cost_per_1k_tickets_usd": 1.115776
+  },
+  "Ministral 14B": {
+   "tickets_answered": "50/50",
+   "valid_output": 0.98,
+   "category_accuracy": 0.98,
+   "priority_accuracy": 0.84,
+   "high_recall": 1.0,
+   "high_precision": 0.75,
+   "under_prioritised": 0.0,
+   "over_prioritised": 0.16,
+   "groundedness": 0.7272727272727273,
+   "fully_answers": 1.0,
+   "replies_graded": 11,
+   "routed_to_human": 0.48,
+   "median_latency_s": 2.135,
+   "p90_latency_s": 2.833,
+   "avg_input_tokens": 2613.58,
+   "avg_output_tokens": 142.58,
+   "cost_per_1k_tickets_usd": 0.551232
+  }
+ },
+ "details": {
+  "Gemini 3.5 Flash-Lite": {
+   "per_category_accuracy": {
+    "ACCOUNT": 0.86,
+    "CANCEL": 1.0,
+    "CONTACT": 1.0,
+    "FEEDBACK": 1.0,
+    "INVOICE": 1.0,
+    "NEWSLETTER": 1.0,
+    "PAYMENT": 1.0,
+    "REFUND": 1.0
+   },
+   "priority_confusion": {
+    "H": {
+     "H": 17,
+     "M": 2,
+     "L": 0
+    },
+    "M": {
+     "H": 1,
+     "M": 14,
+     "L": 3
+    },
+    "L": {
+     "H": 0,
+     "M": 2,
+     "L": 11
+    }
+   },
+   "misses": [
+    {
+     "ticket_id": "T001",
+     "message": "I want assistance to check the goddamn payment methods",
+     "true_category": "PAYMENT",
+     "category": "PAYMENT",
+     "true_priority": "M",
+     "priority": "L",
+     "priority_reason": "Any question about payment methods is low priority as it is an information request with no action needed urgently."
+    },
+    {
+     "ticket_id": "T018",
+     "message": "how do I see at what time customer assistance available is?",
+     "true_category": "CONTACT",
+     "category": "CONTACT",
+     "true_priority": "L",
+     "priority": "M",
+     "priority_reason": "Customer is asking about support hours, which falls under the Medium priority rule for getting help or reaching a human agent."
+    },
+    {
+     "ticket_id": "T025",
+     "message": "help to check what hours customer assistance available is",
+     "true_category": "CONTACT",
+     "category": "CONTACT",
+     "true_priority": "L",
+     "priority": "M",
+     "priority_reason": "Customer is asking for human support hours, which is classified as Medium priority."
+    },
+    {
+     "ticket_id": "T027",
+     "message": "problems with platinum account deletions",
+     "true_category": "ACCOUNT",
+     "category": "CANCEL",
+     "true_priority": "H",
+     "priority": "H",
+     "priority_reason": "Any question about cancellation is classified as High per the explicit priority rules."
+    },
+    {
+     "ticket_id": "T036",
+     "message": "where could i leave a fucking comment for a service",
+     "true_category": "FEEDBACK",
+     "category": "FEEDBACK",
+     "true_priority": "M",
+     "priority": "L",
+     "priority_reason": "Profanity alone does not make a ticket high priority, so it remains low priority for leaving feedback."
+    },
+    {
+     "ticket_id": "T037",
+     "message": "you are not helpful, can I speak with a person?",
+     "true_category": "CONTACT",
+     "category": "CONTACT",
+     "true_priority": "H",
+     "priority": "M",
+     "priority_reason": "Customer is asking for a human agent with strong frustration, bumped up one level per the tie-breaker rule."
+    },
+    {
+     "ticket_id": "T044",
+     "message": "where do I check what hours I can reach customer service?",
+     "true_category": "CONTACT",
+     "category": "CONTACT",
+     "true_priority": "L",
+     "priority": "M",
+     "priority_reason": "Customer needs to know support hours, which is a medium priority task since they are not blocked."
+    },
+    {
+     "ticket_id": "T045",
+     "message": "I don't know what to do to get a reimbursement",
+     "true_category": "REFUND",
+     "category": "REFUND",
+     "true_priority": "M",
+     "priority": "H",
+     "priority_reason": "Refund status or problems are classified as High priority."
+    },
+    {
+     "ticket_id": "T048",
+     "message": "I'm trying to request rebates of my money",
+     "true_category": "REFUND",
+     "category": "REFUND",
+     "true_priority": "M",
+     "priority": "H",
+     "priority_reason": "Refund status or problem is rated High if something is unclear or needs attention."
+    }
+   ],
+   "ungrounded": []
+  },
+  "Ministral 14B": {
+   "per_category_accuracy": {
+    "ACCOUNT": 0.86,
+    "CANCEL": 1.0,
+    "CONTACT": 1.0,
+    "FEEDBACK": 1.0,
+    "INVOICE": 1.0,
+    "NEWSLETTER": 1.0,
+    "PAYMENT": 1.0,
+    "REFUND": 1.0
+   },
+   "priority_confusion": {
+    "H": {
+     "H": 18,
+     "M": 6,
+     "L": 0
+    },
+    "M": {
+     "H": 0,
+     "M": 12,
+     "L": 2
+    },
+    "L": {
+     "H": 0,
+     "M": 0,
+     "L": 12
+    }
+   },
+   "misses": [
+    {
+     "ticket_id": "T001",
+     "message": "I want assistance to check the goddamn payment methods",
+     "true_category": "PAYMENT",
+     "category": "PAYMENT",
+     "true_priority": "M",
+     "priority": "H",
+     "priority_reason": "Strong frustration ('goddamn') bumps priority up one level, capped at H."
+    },
+    {
+     "ticket_id": "T025",
+     "message": "help to check what hours customer assistance available is",
+     "true_category": "CONTACT",
+     "category": "CONTACT",
+     "true_priority": "L",
+     "priority": "M",
+     "priority_reason": "Customer is seeking information about support availability, which is not urgent but requires clarification."
+    },
+    {
+     "ticket_id": "T026",
+     "message": "need help to see the status of my refund",
+     "true_category": "REFUND",
+     "category": "REFUND",
+     "true_priority": "M",
+     "priority": "H",
+     "priority_reason": "Customer is asking about refund status, which is a refund problem (H priority)."
+    },
+    {
+     "ticket_id": "T030",
+     "message": "i need assistance opening a platinum account for my daughter",
+     "true_category": "ACCOUNT",
+     "category": "ACCOUNT",
+     "true_priority": "M",
+     "priority": "H",
+     "priority_reason": "Customer is blocked from creating a Platinum account for a new user, which may prevent product usage."
+    },
+    {
+     "ticket_id": "T036",
+     "message": "where could i leave a fucking comment for a service",
+     "true_category": "FEEDBACK",
+     "category": "FEEDBACK",
+     "true_priority": "M",
+     "priority": "H",
+     "priority_reason": "Strong frustration (profanity) \u2192 bump up one level, capped at H."
+    },
+    {
+     "ticket_id": "T044",
+     "message": "where do I check what hours I can reach customer service?",
+     "true_category": "CONTACT",
+     "category": "CONTACT",
+     "true_priority": "L",
+     "priority": "M",
+     "priority_reason": "Customer needs to know support hours, no urgency or risk involved."
+    },
+    {
+     "ticket_id": "T045",
+     "message": "I don't know what to do to get a reimbursement",
+     "true_category": "REFUND",
+     "category": "REFUND",
+     "true_priority": "M",
+     "priority": "H",
+     "priority_reason": "Customer is asking about a refund status or problem, which is a churn signal."
+    },
+    {
+     "ticket_id": "T048",
+     "message": "I'm trying to request rebates of my money",
+     "true_category": "REFUND",
+     "category": "REFUND",
+     "true_priority": "M",
+     "priority": "H",
+     "priority_reason": "Customer is asking about refund status or a problem with a refund, which is a churn signal."
+    },
+    {
+     "ticket_id": "T049",
+     "message": "update details on platinum account",
+     "true_category": "ACCOUNT",
+     "category": "{'TYPE': 'ACCOUNT'}",
+     "true_priority": "M",
+     "priority": "M",
+     "priority_reason": "{'type': 'string', 'description': 'Customer needs to update account details, but is not blocked or at risk of churn.'}"
+    }
+   ],
+   "ungrounded": [
+    {
+     "ticket_id": "T009",
+     "message": "show me bill #00108",
+     "reply": "To view or download invoice #00108, log in to your Nimbus CRM account and go to **Settings \u2192 Billing \u2192 Invoices**. You can search by invoice number or date. If you\u2019re not an admin or billing contact, ask your workspace admin to share it with you.",
+     "unsupported_claims": "ask your workspace admin to share it with you"
+    },
+    {
+     "ticket_id": "T020",
+     "message": "open gold cacount for wife",
+     "reply": "Your wife can sign up for a **Gold** plan at [nimbuscrm.example/signup](nimbuscrm.example/signup). Each workspace must have its own admin email, and users can be added later in **Settings \u2192 Team \u2192 Invite user**. If she needs help, she can contact support with any sign-up errors.",
+     "unsupported_claims": "Each workspace must have its own admin email"
+    },
+    {
+     "ticket_id": "T032",
+     "message": "I have got to talk with a live agent",
+     "reply": "You can reach a live agent via the chat widget in the bottom-right corner of the app. Type 'agent' to connect during our live chat hours (Monday\u2013Friday, 8:00\u201320:00 GMT). For urgent matters outside these hours, email support@nimbuscrm.example, and we\u2019ll respond within 4 business hours for paid plans.",
+     "unsupported_claims": "For urgent matters outside these hours"
+    }
+   ]
+  }
+ },
+ "targets": {
+  "high_recall": [
+   0.9,
+   ">="
+  ],
+  "category_accuracy": [
+   0.9,
+   ">="
+  ],
+  "priority_accuracy": [
+   0.75,
+   ">="
+  ],
+  "groundedness": [
+   0.95,
+   ">="
+  ],
+  "median_latency_s": [
+   3.0,
+   "<="
+  ]
+ }
+}

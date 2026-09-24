@@ -1,0 +1,166 @@
+{
+ "scores": {
+  "Gemini 3.5 Flash-Lite": {
+   "tickets_answered": "50/50",
+   "valid_output": 1.0,
+   "category_accuracy": 0.98,
+   "priority_accuracy": 1.0,
+   "high_recall": 1.0,
+   "high_precision": 1.0,
+   "under_prioritised": 0.0,
+   "over_prioritised": 0.0,
+   "groundedness": NaN,
+   "fully_answers": NaN,
+   "replies_graded": 0,
+   "routed_to_human": 0.36,
+   "median_latency_s": 1.75,
+   "p90_latency_s": 2.133,
+   "avg_input_tokens": 2953.42,
+   "avg_output_tokens": 123.24,
+   "cost_per_1k_tickets_usd": 1.194126
+  },
+  "Ministral 14B": {
+   "tickets_answered": "50/50",
+   "valid_output": 1.0,
+   "category_accuracy": 1.0,
+   "priority_accuracy": 0.94,
+   "high_recall": 1.0,
+   "high_precision": 0.8571428571428571,
+   "under_prioritised": 0.0,
+   "over_prioritised": 0.06,
+   "groundedness": NaN,
+   "fully_answers": NaN,
+   "replies_graded": 0,
+   "routed_to_human": 0.42,
+   "median_latency_s": 2.04,
+   "p90_latency_s": 2.5709999999999997,
+   "avg_input_tokens": 2920.58,
+   "avg_output_tokens": 149.18,
+   "cost_per_1k_tickets_usd": 0.613952
+  }
+ },
+ "details": {
+  "Gemini 3.5 Flash-Lite": {
+   "per_category_accuracy": {
+    "ACCOUNT": 0.86,
+    "CANCEL": 1.0,
+    "CONTACT": 1.0,
+    "FEEDBACK": 1.0,
+    "INVOICE": 1.0,
+    "NEWSLETTER": 1.0,
+    "PAYMENT": 1.0,
+    "REFUND": 1.0
+   },
+   "priority_confusion": {
+    "H": {
+     "H": 18,
+     "M": 0,
+     "L": 0
+    },
+    "M": {
+     "H": 0,
+     "M": 18,
+     "L": 0
+    },
+    "L": {
+     "H": 0,
+     "M": 0,
+     "L": 14
+    }
+   },
+   "misses": [
+    {
+     "ticket_id": "T027",
+     "message": "problems with platinum account deletions",
+     "true_category": "ACCOUNT",
+     "category": "CANCEL",
+     "true_priority": "H",
+     "priority": "H",
+     "priority_reason": "Any question about cancellation, exit or early-termination fees or account deletion blocks under annual contracts is classified as High priority."
+    }
+   ],
+   "ungrounded": []
+  },
+  "Ministral 14B": {
+   "per_category_accuracy": {
+    "ACCOUNT": 1.0,
+    "CANCEL": 1.0,
+    "CONTACT": 1.0,
+    "FEEDBACK": 1.0,
+    "INVOICE": 1.0,
+    "NEWSLETTER": 1.0,
+    "PAYMENT": 1.0,
+    "REFUND": 1.0
+   },
+   "priority_confusion": {
+    "H": {
+     "H": 18,
+     "M": 3,
+     "L": 0
+    },
+    "M": {
+     "H": 0,
+     "M": 15,
+     "L": 0
+    },
+    "L": {
+     "H": 0,
+     "M": 0,
+     "L": 14
+    }
+   },
+   "misses": [
+    {
+     "ticket_id": "T026",
+     "message": "need help to see the status of my refund",
+     "true_category": "REFUND",
+     "category": "REFUND",
+     "true_priority": "M",
+     "priority": "H",
+     "priority_reason": "Refund status or problem with a refund is a high-priority issue due to money at risk."
+    },
+    {
+     "ticket_id": "T030",
+     "message": "i need assistance opening a platinum account for my daughter",
+     "true_category": "ACCOUNT",
+     "category": "ACCOUNT",
+     "true_priority": "M",
+     "priority": "H",
+     "priority_reason": "Customer is attempting to sign up for a paid plan, which is a critical action for product access."
+    },
+    {
+     "ticket_id": "T036",
+     "message": "where could i leave a fucking comment for a service",
+     "true_category": "FEEDBACK",
+     "category": "FEEDBACK",
+     "true_priority": "M",
+     "priority": "H",
+     "priority_reason": "Formal complaint indicated by profanity and explicit request for feedback/complaint channel, bumping priority from base level (L) to H due to frustration."
+    }
+   ],
+   "ungrounded": []
+  }
+ },
+ "targets": {
+  "high_recall": [
+   0.9,
+   ">="
+  ],
+  "category_accuracy": [
+   0.9,
+   ">="
+  ],
+  "priority_accuracy": [
+   0.75,
+   ">="
+  ],
+  "groundedness": [
+   0.95,
+   ">="
+  ],
+  "median_latency_s": [
+   3.0,
+   "<="
+  ]
+ }
+}

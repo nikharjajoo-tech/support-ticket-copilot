@@ -1,0 +1,6 @@
+{
+ "_note": "USD per 1M tokens, paid tier list prices, checked 2026-09-23. Sources: ai.google.dev/gemini-api/docs/pricing, docs.mistral.ai/inference/pricing. Output price also applies to thinking tokens.",
+ "Gemini 3.5 Flash-Lite": {"input": 0.30, "output": 2.50},
+ "Gemini 3.5 Flash": {"input": 1.50, "output": 9.00},
+ "Ministral 14B": {"input": 0.20, "output": 0.20}
+}
