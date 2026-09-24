@@ -66,6 +66,8 @@ with tab_try:
         sample = None if choice.startswith("✍️") else gold[gold.ticket_id == choice.split(" · ")[0]].iloc[0]
         ticket = st.text_area("Customer message", value="" if sample is None else sample.message, height=110,
                               placeholder="e.g. Our payment failed twice and the whole team is locked out!")
+        st.caption("🔒 Demo runs on free-tier AI APIs, which may use inputs to improve their models. "
+                   "Please don't enter real personal or company data.")
         model = st.selectbox("Model", DEMO_MODELS,
                              help="Gemini 3.5 Flash-Lite is the recommended default from the evaluation. "
                                   "If the chosen model is unavailable, the other vendor's model takes over.")
