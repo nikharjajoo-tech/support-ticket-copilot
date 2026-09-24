@@ -99,9 +99,10 @@ with tab_try:
         else:
             if r.get("fallback_from"):
                 st.warning(f"{r['fallback_from']} was unavailable, so the backup model **{r['model']}** handled this ticket.")
-            c1, c2, c3, c4 = st.columns(4)
+            c1, c2 = st.columns(2)
             c1.metric("Category", r["category"].title())
             c2.metric("Priority", PRIORITY_LABEL.get(r["priority"], r["priority"]))
+            c3, c4 = st.columns(2)
             c3.metric("Sentiment", r["sentiment"].title())
             c4.metric("Route", "👤 Human review" if r["needs_human"] else "✅ Agent queue")
             st.markdown(f"**Why this priority:** {r['priority_reason']}")
