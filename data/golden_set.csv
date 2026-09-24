@@ -1,0 +1,51 @@
+ticket_id,message,true_category,true_intent,priority,label_note,priority_first_pass
+T001,I want assistance to check the goddamn payment methods,PAYMENT,check_payment_methods,M,re-labelled to match rubric,L
+T002,can I see what payment methods are available?,PAYMENT,check_payment_methods,L,,L
+T003,I want to know if there is anything wrong with my refund,REFUND,track_refund,H,,H
+T004,can you help me to talk with an assistant?,CONTACT,contact_human_agent,M,,M
+T005,I want help receoving the newsletter,NEWSLETTER,newsletter_subscription,L,,L
+T006,"I need to unsubscribe from the newsletter, can yyou help me?",NEWSLETTER,newsletter_subscription,L,,L
+T007,I need assistance informing of signup problems,ACCOUNT,registration_problems,H,,H
+T008,I try to check in which situations can I ask for a refund,REFUND,check_refund_policy,M,re-labelled to match rubric,L
+T009,show me bill #00108,INVOICE,check_invoice,M,,M
+T010,checking early exit fee,CANCEL,check_cancellation_fee,H,re-labelled to match rubric,L
+T011,I am tring to see the early exit penalty,CANCEL,check_cancellation_fee,H,,H
+T012,I need assistance leaving a review about a product,FEEDBACK,review,L,,L
+T013,i have to check the cancellation penalty,CANCEL,check_cancellation_fee,H,,H
+T014,want help to solve errors with payment,PAYMENT,payment_issue,H,,H
+T015,I don't know how I can list the allowed payment methods,PAYMENT,check_payment_methods,L,re-labelled to match rubric,H
+T016,I do not know how to check the cancellation charge,CANCEL,check_cancellation_fee,H,re-labelled to match rubric,M
+T017,can uhelp me subscribe to ur newsletter,NEWSLETTER,newsletter_subscription,L,,L
+T018,how do I see at what time customer assistance available is?,CONTACT,contact_customer_service,L,,L
+T019,I need assistance downloading my bill #12588,INVOICE,get_invoice,M,,M
+T020,open gold cacount for wife,ACCOUNT,create_account,M,,M
+T021,check cancellation fee,CANCEL,check_cancellation_fee,H,re-labelled to match rubric,L
+T022,help to inform of errors with online payments,PAYMENT,payment_issue,H,,H
+T023,need assistance to check ur reimbursement policy,REFUND,check_refund_policy,M,,M
+T024,I acn't unsubscribe to your company newsletter,NEWSLETTER,newsletter_subscription,L,,L
+T025,help to check what hours customer assistance available is,CONTACT,contact_customer_service,L,,L
+T026,need help to see the status of my refund,REFUND,track_refund,M,,M
+T027,problems with platinum account deletions,ACCOUNT,delete_account,H,,H
+T028,download bill #12588,INVOICE,get_invoice,M,,M
+T029,could you help me file a customer reclamation?,FEEDBACK,complaint,H,re-labelled to match rubric,M
+T030,i need assistance opening a platinum account for my daughter,ACCOUNT,create_account,M,,M
+T031,I want help to see the early exit fees,CANCEL,check_cancellation_fee,H,,H
+T032,I have got to talk with a live agent,CONTACT,contact_human_agent,M,,M
+T033,I do not know what I need to do to download the bill #85632,INVOICE,get_invoice,M,re-labelled to match rubric,L
+T034,"I have got to change to the freemium account, help me",ACCOUNT,switch_account,H,,H
+T035,i have got to look for bill #85632,INVOICE,check_invoice,M,,M
+T036,where could i leave a fucking comment for a service,FEEDBACK,review,M,re-labelled to match rubric,H
+T037,"you are not helpful, can I speak with a person?",CONTACT,contact_human_agent,H,,H
+T038,i want assistance unsubscribing from the newsletter,NEWSLETTER,newsletter_subscription,L,,L
+T039,where do I leave a review for your services?,FEEDBACK,review,L,re-labelled to match rubric,M
+T040,want assistance seeing bill #37777,INVOICE,check_invoice,M,re-labelled to match rubric,L
+T041,I have to make a consumer reclamation against your company,FEEDBACK,complaint,H,,H
+T042,I need help to report a trouble with online payment,PAYMENT,payment_issue,H,,H
+T043,information about receiving your company newsletter,NEWSLETTER,newsletter_subscription,L,,L
+T044,where do I check what hours I can reach customer service?,CONTACT,contact_customer_service,L,,L
+T045,I don't know what to do to get a reimbursement,REFUND,get_refund,M,,M
+T046,i want assistance to list the payment methods,PAYMENT,check_payment_methods,L,re-labelled to match rubric,M
+T047,where do I notify of an error with signup?,ACCOUNT,registration_problems,H,,H
+T048,I'm trying to request rebates of my money,REFUND,get_refund,M,,M
+T049,update details on platinum account,ACCOUNT,edit_account,M,re-labelled to match rubric,L
+T050,where to lodge a complaint?,FEEDBACK,complaint,H,,H

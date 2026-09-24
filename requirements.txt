@@ -1,0 +1,6 @@
+streamlit
+google-genai
+mistralai
+python-dotenv
+pandas
+datasets
