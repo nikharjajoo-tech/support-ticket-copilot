@@ -4,3 +4,6 @@ __pycache__/
 *.pyc
 .DS_Store
 .streamlit/secrets.toml
+
+# Unrelated project folder that lives here locally
+Insurance voice agent/
