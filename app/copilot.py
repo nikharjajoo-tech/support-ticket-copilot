@@ -84,18 +84,21 @@ _gemini = None
 _mistral = None
 
 
+# Clients are cached per key, so a key added later (e.g. via app secrets) is picked up.
 def _gemini_client():
     global _gemini
-    if _gemini is None:
-        _gemini = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
-    return _gemini
+    key = os.getenv("GEMINI_API_KEY", "")
+    if _gemini is None or _gemini[0] != key:
+        _gemini = (key, genai.Client(api_key=key))
+    return _gemini[1]
 
 
 def _mistral_client():
     global _mistral
-    if _mistral is None:
-        _mistral = Mistral(api_key=os.getenv("MISTRAL_API_KEY"))
-    return _mistral
+    key = os.getenv("MISTRAL_API_KEY", "")
+    if _mistral is None or _mistral[0] != key:
+        _mistral = (key, Mistral(api_key=key))
+    return _mistral[1]
 
 
 def _call_gemini(model_id, ticket, settings):

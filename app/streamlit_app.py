@@ -52,6 +52,11 @@ st.title("🎫 AI Support Ticket Copilot")
 st.caption("Triages B2B SaaS support tickets and drafts replies grounded in the help centre, "
            "with a human agent always in control. Portfolio project · fictional company \"Nimbus CRM\".")
 
+missing = [k for k in ("GEMINI_API_KEY", "MISTRAL_API_KEY") if not os.getenv(k)]
+if missing:
+    st.error(f"API keys not configured: {', '.join(missing)}. Add them in the app's Secrets settings "
+             "(or in a local .env file) to enable live triage. The scorecard still works.")
+
 tab_try, tab_score, tab_how = st.tabs(["Triage a ticket", "Evaluation scorecard", "How it works"])
 
 # ---------------------------------------------------------------- Tab 1: try it

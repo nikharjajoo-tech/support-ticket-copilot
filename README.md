@@ -2,7 +2,7 @@
 
 An AI layer for B2B SaaS support teams. It classifies each incoming ticket, sets its priority using the team's own written policy, drafts a reply grounded only in the help centre, and flags urgent or angry tickets for a senior agent. A human always sends the reply.
 
-**▶ Live demo:** _link added after deployment_ · **📄 [PRD](docs/prd.md)** · **🧭 [Decision log](docs/decision-log.md)** · **📊 [Scorecard](evals/scorecard.md)**
+**▶ [Live demo](https://support-ticket-copilot-5ym8ulkda6qgrbzkyhxeoj.streamlit.app/)** · **📄 [PRD](docs/prd.md)** · **🧭 [Decision log](docs/decision-log.md)** · **📊 [Scorecard](evals/scorecard.md)**
 
 > Portfolio project by Nikhar Jajoo (AI Product Manager). "Nimbus CRM" is a fictional company. Model quality, latency and cost are **measured**; time and cost savings are **projections** from stated assumptions (see PRD §7).
 
