@@ -60,6 +60,8 @@ def main():
             "groundedness": (g.grounded.astype(str) == "True").mean() if len(g) else float("nan"),
             "fully_answers": (g.answers_question.astype(int) == 3).mean() if len(g) else float("nan"),
             "replies_graded": len(g),
+            # Pass/fail on grader metrics only counts once most replies are graded
+            "grading_preliminary": len(g) < 0.8 * n_total,
             "routed_to_human": (ok.needs_human.astype(str) == "True").mean(),
             "median_latency_s": ok.latency_s.astype(float).median(),
             "p90_latency_s": ok.latency_s.astype(float).quantile(0.9),
@@ -89,6 +91,8 @@ def main():
              "| Metric | Target | " + " | ".join(models) + " |",
              "|---|---|" + "---|" * len(models)]
 
+    lines_note = set()
+
     def row(label, key, fmt, target=None):
         cells = []
         for m in models:
@@ -97,6 +101,10 @@ def main():
                 cells.append("n/a")
                 continue
             cell = fmt(v)
+            if key in ("groundedness", "fully_answers") and scores[m].get("grading_preliminary"):
+                lines_note.add(m)
+                cells.append(f"{cell} ⚠️ preliminary (n={scores[m]['replies_graded']})")
+                continue
             if target:
                 t, op = target
                 passed = v >= t if op == ">=" else v <= t
@@ -121,6 +129,10 @@ def main():
     row("Avg tokens in / out", "avg_input_tokens",
         lambda v: f"{v:.0f}")
     row("Cost per 1,000 tickets (paid list price)", "cost_per_1k_tickets_usd", lambda v: f"${v:.2f}")
+
+    if lines_note:
+        lines += ["", "⚠️ Grader metrics are preliminary: fewer than 80% of replies graded so far "
+                      "(free-tier grader quotas). Pass/fail is not claimed until grading completes."]
 
     for m in models:
         det = details[m]

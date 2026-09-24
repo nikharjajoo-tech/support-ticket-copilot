@@ -1,0 +1,11 @@
+key,ticket_id,model,grounded,answers_question,unsupported_claims,note,grader
+T047|Gemini 3.5 Flash-Lite,T047,Gemini 3.5 Flash-Lite,True,3,,The reply directly answers how and where to report sign-up issues using facts from KB01.,gemini-3.6-flash
+T050|Gemini 3.5 Flash-Lite,T050,Gemini 3.5 Flash-Lite,True,3,,"The reply accurately provides the link, email address, and response timeline for formal complaints from KB08.",gemini-3.6-flash
+T023|Gemini 3.5 Flash-Lite,T023,Gemini 3.5 Flash-Lite,True,3,,The reply clearly states the reimbursement/refund policy rules from KB04.,gemini-3.6-flash
+T009|Ministral 14B,T009,Ministral 14B,True,3,,The reply fully explains where to view the specific invoice and who has permission to access it per KB02.,gemini-3.6-flash
+T042|Gemini 3.5 Flash-Lite,T042,Gemini 3.5 Flash-Lite,True,3,,The reply provides accurate troubleshooting steps and instructions for payment issues according to KB03.,gemini-3.6-flash
+T049|Ministral 14B,T049,Ministral 14B,True,3,,The reply correctly details the navigation path and requirements for updating account details from KB01.,gemini-3.6-flash
+T013|Ministral 14B,T013,Ministral 14B,True,3,,The reply accurately explains how the cancellation penalty is calculated and where to see it as outlined in KB06.,gemini-3.6-flash
+T030|Gemini 3.5 Flash-Lite,T030,Gemini 3.5 Flash-Lite,True,3,,The reply uses KB01 to explain how to create a separate workspace and user on a paid plan.,gemini-3.6-flash
+T031|Gemini 3.5 Flash-Lite,T031,Gemini 3.5 Flash-Lite,True,3,,The reply fully answers where and how to view early exit fees using details from KB06.,gemini-3.6-flash
+T002|Ministral 14B,T002,Ministral 14B,True,3,,The reply comprehensively lists all accepted and unsupported payment methods from KB03.,gemini-3.6-flash

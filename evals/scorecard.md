@@ -7,18 +7,20 @@ Golden set: 50 tickets · targets fixed in `docs/prd.md` before the run · grade
 | ⭐ High-priority recall | ≥ 90% | 100% ✅ | 100% ✅ |
 | Category accuracy | ≥ 90% | 98% ✅ | 100% ✅ |
 | Priority accuracy | ≥ 75% | 100% ✅ | 94% ✅ |
-| Groundedness (no invented facts) | ≥ 95% | n/a | n/a |
+| Groundedness (no invented facts) | ≥ 95% | 100% ⚠️ preliminary (n=6) | 100% ⚠️ preliminary (n=4) |
 | Median latency | ≤ 3.0s | 1.8s ✅ | 2.0s ✅ |
 | Tickets answered |  | 50/50 | 50/50 |
 | Valid structured output |  | 100% | 100% |
 | High-priority precision |  | 100% | 86% |
 | Under-prioritised (costly error) |  | 0% | 0% |
 | Over-prioritised (cheaper error) |  | 0% | 6% |
-| Reply fully answers question |  | n/a | n/a |
+| Reply fully answers question |  | 100% ⚠️ preliminary (n=6) | 100% ⚠️ preliminary (n=4) |
 | Routed to a human |  | 36% | 42% |
 | p90 latency |  | 2.1s | 2.6s |
 | Avg tokens in / out |  | 2953 | 2921 |
 | Cost per 1,000 tickets (paid list price) |  | $1.19 | $0.61 |
+
+⚠️ Grader metrics are preliminary: fewer than 80% of replies graded so far (free-tier grader quotas). Pass/fail is not claimed until grading completes.
 
 ## Gemini 3.5 Flash-Lite: misses (1)
 

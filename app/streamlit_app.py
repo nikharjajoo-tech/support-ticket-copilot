@@ -159,6 +159,9 @@ with tab_score:
             for m in models:
                 v = scores[m].get(key)
                 cell = fmt(v, kind)
+                if key in ("groundedness", "fully_answers") and scores[m].get("grading_preliminary"):
+                    row[m] = f"{cell} ⚠️ preliminary (n={scores[m]['replies_graded']})"
+                    continue
                 if key in targets and v is not None and v == v:
                     t, op = targets[key]
                     cell += " ✅" if (v >= t if op == ">=" else v <= t) else " ❌"
@@ -166,9 +169,9 @@ with tab_score:
             table.append(row)
         st.dataframe(pd.DataFrame(table), hide_index=True, width="stretch")
         graded = [scores[m].get("replies_graded", 0) for m in models]
-        if min(graded) < 50:
-            st.caption(f"⚠️ Groundedness is preliminary: {sum(graded)}/100 replies graded so far "
-                       "(the free-tier grader quota ran out).")
+        if any(scores[m].get("grading_preliminary") for m in models):
+            st.caption(f"⚠️ Grader metrics are preliminary: {sum(graded)}/{50 * len(models)} replies graded so far "
+                       "(free-tier grader quotas). Pass/fail isn't claimed until grading completes.")
 
         st.subheader("Where the models got it wrong")
         pick = st.radio("Model", models, horizontal=True, label_visibility="collapsed")
